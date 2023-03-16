@@ -50,9 +50,7 @@ class Table{
         console.table(newMatrix);
     }
 }
-
-
-////////
+/////
 const sameValidator = {
     isValid: (moves)=>(moves.length === new Set(moves).size),
     message: 'у вас есть повторения'
