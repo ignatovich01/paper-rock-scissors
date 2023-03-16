@@ -59,15 +59,15 @@ class Table {
 ////////
 const sameValidator = {
   isValid: (moves) => moves.length === new Set(moves).size,
-  message: 'у вас есть повторения',
+  message: 'should not be repeated',
 };
 const lengthValidator = {
   isValid: (moves) => moves.length >= 3,
-  message: 'слишком мало параметров',
+  message: 'too short, must be >= 3   ',
 };
 const oddValidator = {
   isValid: (moves) => moves.length % 2 !== 0,
-  message: 'должно быть нечетное число параметров',
+  message: 'must be odd number',
 };
 const validators = [sameValidator, lengthValidator, oddValidator];
 function validateInput(moves) {
@@ -135,5 +135,5 @@ function startGame() {
 try {
   startGame();
 } catch (err) {
-  console.log(err + '' + err.message);
+  console.log(err.message);
 }
